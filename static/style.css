@@ -40,10 +40,10 @@ body{
     align-items: center;
     text-align: left;
     weight:100;
-    height: 3vh;
+    height: 10vh;
     width: 25vw;
-    grid-template-rows: repeat(2,1fr);
-    grid-row-gap: 10px;
+    grid-template-rows: repeat(3,1fr);
+    grid-row-gap: 20px;
 }
 .UserName,.Password{
     background-color: rgb(255, 255, 255);
@@ -109,4 +109,12 @@ body{
 a{
     position:relative;
     margin:auto;
+}
+.parent_input{
+    display:grid;
+    gap:10px;
+}
+form{
+    display:grid;
+    gap:10px;
 }
