@@ -18,22 +18,16 @@ def login():
     username = request.form['username']
     password = request.form['password']
     cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-    cursor.execute('SELECT * FROM users WHERE username = %s AND password = %s', (username, password,))
+    cursor.execute('SELECT * FROM users WHERE username = % s AND password = % s', (username, password, ))
     account = cursor.fetchone()
     if account:
         return render_template("index.html") + '<script>alert("Login successful")</script>'
     else:
         return render_template('login.html') + '<script>alert("Login unsuccessful. Please try again.")</script>'
-
-@app.route('/after_entry', methods=['POST'])
-def after_entry():
-    data = request.form.to_dict(flat=False)  
-    return jsonify({'received_data': data})
-
+    
 @app.route('/enter_data', methods=['GET'])
 def enter_data():
-    print("enter_data function executed")
     return render_template("enter_data.html")
-
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    app.run(debug=True,port=5000)
+

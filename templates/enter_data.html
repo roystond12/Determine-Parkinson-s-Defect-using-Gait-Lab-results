@@ -15,7 +15,7 @@
         <img src="{{url_for('static',filename='warn.png')}}" height=15px>
             Enter the following details properly to get accurate results the better the inputs the better the results
     </div>
-    <form>
+    <form action="/after_entry" method="POST">
         <div class="inp1 inp">
             Enter the Step Length : <input type = "number" name = "step_length" placeholder="(in cms)"> </input>
         </div>
