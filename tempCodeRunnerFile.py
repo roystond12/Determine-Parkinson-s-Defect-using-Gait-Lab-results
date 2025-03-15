@@ -1,8 +1,10 @@
 from flask import Flask, request, render_template, jsonify
 from flask_mysqldb import MySQL
 import MySQLdb.cursors
+from second import second
 
 app = Flask(__name__)  
+
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = '' 

@@ -1,8 +1,10 @@
 from flask import Flask, request, render_template, jsonify
 from flask_mysqldb import MySQL
 import MySQLdb.cursors
+from second import second
 
 app = Flask(__name__)  
+app.register_blueprint(second)
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = '' 
@@ -24,11 +26,6 @@ def login():
         return render_template("index.html") + '<script>alert("Login successful")</script>'
     else:
         return render_template('login.html') + '<script>alert("Login unsuccessful. Please try again.")</script>'
-
-@app.route('/after_entry', methods=['POST'])
-def after_entry():
-    data = request.form.to_dict(flat=False)  
-    return jsonify({'received_data': data})
 
 @app.route('/enter_data', methods=['GET'])
 def enter_data():
