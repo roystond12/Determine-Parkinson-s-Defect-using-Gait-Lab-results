@@ -24,5 +24,9 @@ def login():
         return render_template("index.html") + '<script>alert("Login successful")</script>'
     else:
         return render_template('login.html') + '<script>alert("Login unsuccessful. Please try again.")</script>'
+    
+@app.route('/enter_data', methods=['GET'])
+def enter_data():
+    return render_template("enter_data.html")
 if __name__ == '__main__':
     app.run(debug=True)

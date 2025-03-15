@@ -14,15 +14,17 @@
         Home
     </div>
     <div class = "parent-tab">
-    <div class = "tab1 tab">
-        <div class = head>
+    <div class="tab1 tab">
+        <div class="head">
             ENTER DATA
         </div>
-        <div class = "image-tab">
-            <img class = "image" src="{{url_for('static',filename='data_enter.png')}}" alt="" width:2px>
+        <div class="image-tab">
+            <img class="image" src="{{url_for('static',filename='data_enter.png')}}" alt="" width="2px">
         </div>
         <div class="button">
-            <input type="submit" value = "Proceed">
+            <form action="/enter_data" method="get">
+                <input type="submit" value="Proceed">
+            </form>
         </div>
     </div>
     <div class = "tab2 tab">
