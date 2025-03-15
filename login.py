@@ -21,7 +21,7 @@ def login():
     cursor.execute('SELECT * FROM users WHERE username = % s AND password = % s', (username, password, ))
     account = cursor.fetchone()
     if account:
-        return "0"
+        return render_template("index.html") + '<script>alert("Login successful")</script>'
     else:
         return render_template('login.html') + '<script>alert("Login unsuccessful. Please try again.")</script>'
 if __name__ == '__main__':
