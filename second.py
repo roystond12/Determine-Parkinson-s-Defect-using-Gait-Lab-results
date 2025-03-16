@@ -1,14 +1,13 @@
 from flask import Blueprint, render_template,jsonify,request
 import pickle
 import numpy as np
-import jsonpickle
 
 second = Blueprint("second",__name__,static_folder="static",template_folder="templates")
 with open('pd2.pkl', 'rb') as file:
     model = pickle.load(file)
 
-@second.route('/after_entry', methods=['POST'])
-def after_entry():
+@second.route('/results', methods=['POST'])
+def results():
     data = request.form.to_dict(flat=False)  
     step_length = float(data['step_length'][0])
     velocity = float(data['velocity'][0])
@@ -60,6 +59,6 @@ def after_entry():
             arr.append(0)
     data = np.asarray(arr)        
     prediction = model.predict([data])[0]
-    
-    return str(prediction)
+    percprediction = model.predict_proba([data])[0][1]
+    return render_template('results.html',prediction = prediction,percprediction = percprediction * 100)
 

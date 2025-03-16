@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='results.css') }}">
+    <script src="https://cdn.plot.ly/plotly-2.11.1.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>PREDICTION RESULTS</h2>
+        {% if percprediction is defined %}
+            <div class="results">
+                <strong>The probability of the patient having Parkinson's disease is {{"%.2f" | format(percprediction)}}%.</strong>  
+                {% if percprediction >= 90 %}
+                    <p style="color: red;"><strong>High Risk:</strong> Immediate specialist consultation recommended.</p>
+                {% elif percprediction >= 75 %}
+                    <p style="color: orange;"><strong>Moderate Risk:</strong> Further testing is advised.</p>
+                {% elif percprediction >= 50 %}
+                    <p style="color: yellow;"><strong>Possible Risk:</strong> Cross-check with additional tests.</p>
+                {% elif percprediction >= 25 %}
+                    <p style="color: green;"><strong>Low Risk:</strong> Continue monitoring symptoms.</p>
+                {% else %}
+                    <p style="color: cyan;"><strong>Very Low Risk:</strong> Most likely, the patient does not have Parkinson’s.</p>
+                {% endif %}
+            </div>
+            <div class="pie-chart" id="chart"></div>
+        {% endif %}
+    </div>
+    
+    <script>
+        window.onload = function() {
+            const data = [{
+                labels: ['PD Probability', 'Non-PD Probability'],
+                values: [{{ percprediction }}, {{ 100 - percprediction }}],
+                type: 'pie',
+                marker: { colors: ['#ff6600', '#3366cc'] }
+            }];           
+            const layout = {
+                title: "Patient's PD vs Non-PD Probability",
+                paper_bgcolor: 'rgba(0,0,0,0)',
+                plot_bgcolor: 'rgba(0,0,0,0)',
+                font: { color: 'white' }
+            };
+            
+            Plotly.newPlot('chart', data, layout);
+        };
+    </script>
+</body>
+</html>
