@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='dashboard.css')}}">
+    <script src="https://cdn.plot.ly/plotly-2.11.1.min.js"></script>
+</head>
+<body>
+    <div class="main">
+    <div class="container">
+        <h2 class = "text">VISUALIZE DATA</h2>
+    </div>
+    <div id="pie">
+
+    </div>
+</div>
+<script>
+    window.onload = function() {
+        const data = [{
+            labels: ['PD Probability', 'Non-PD Probability'],
+            values: [{{ percprediction }}, {{ 100 - percprediction }}],
+            type: 'pie',
+            marker: { colors: ['#ff6600', '#3366cc'] }
+        }];           
+        const layout = {
+            title: "Patient's PD vs Non-PD Probability",
+            paper_bgcolor: 'rgba(0,0,0,0)',
+            plot_bgcolor: 'rgba(0,0,0,0)',
+            font: { color: 'white' }
+        };
+        
+        Plotly.newPlot('pie', data, layout);
+    };
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+.text{
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:"wdth" 100; 
+    color: rgb(255, 255, 255);
+}
+body {   
+    background: 
+        linear-gradient(to right, rgba(6, 89, 100, 0.7), rgba(56, 111, 148, 0.7), rgba(111, 158, 189, 0.7)), 
+        url("background.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.pie{
+    height:80%;
+    width:80%;
+}

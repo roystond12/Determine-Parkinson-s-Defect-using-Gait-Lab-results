@@ -30,24 +30,25 @@ def results():
     instability = 1 if 'instability' in data else 0
     Bradykinesia = 1 if 'Bradykinesia' in data else 0
     dict = {
-        2:step_length,
-        8:velocity,
-        9:stride_length,
-        21:Step_Time,
-        27:Stride_Time,
-        75:Gait_Asymmetry,
-        93:Swing_Time,
-        111:Double_Support_Time,
-        189:Ambulation_Time,
-        190:cadence,
-        191:Mean_eGVI,
-        192:Left_eGVI,
-        193:Right_eGVI,
-        194:Postural,
-        195:instability,
-        196:Bradykinesia,
-        197:Rigidity,
-        198:Tremor
+        52:Step_Width,
+        43:step_length,
+        42:velocity,
+        18:stride_length,
+        51:Step_Time,
+        180:Stride_Time,
+        101:Gait_Asymmetry,
+        52:Swing_Time,
+        35:Double_Support_Time,
+        83:Ambulation_Time,
+        51:cadence,
+        93:Mean_eGVI,
+        181:Left_eGVI,
+        63:Right_eGVI,
+        193:Postural,
+        194:instability,
+        195:Bradykinesia,
+        196:Rigidity,
+        197:Tremor,
         
     }
     data = [step_length,velocity,cadence,Mean_eGVI,Left_eGVI,Right_eGVI,Ambulation_Time,Stride_Time,Double_Support_Time,Swing_Time,Step_Time,Step_Width,stride_length,Gait_Asymmetry,Gait_Variability,Postural,Tremor,Rigidity,instability,Bradykinesia]
@@ -60,5 +61,12 @@ def results():
     data = np.asarray(arr)        
     prediction = model.predict([data])[0]
     percprediction = model.predict_proba([data])[0][1]
+    print(percprediction)
     return render_template('results.html',prediction = prediction,percprediction = percprediction * 100)
+
+@second.route('/dashboard', methods=['POST','GET'])
+def dashboard():
+    percprediction = request.args.get('percprediction', default=0, type=float)
+    print(percprediction)
+    return render_template('dashboard.html', percprediction=percprediction)
 
