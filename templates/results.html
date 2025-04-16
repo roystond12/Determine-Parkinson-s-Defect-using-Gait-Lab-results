@@ -28,10 +28,12 @@
             <div class="pie-chart" id="chart"></div>
         {% endif %}
     </div>
-    <form action = "/dashboard" method = "get">
-        <input type = "submit" value = "Goto DashBoard">
+    {% if percprediction is defined %}
+    <form action="/dashboard" method="post">
+        <input type="hidden" name="percprediction" value="{{ percprediction }}">
+        <input type="submit" value="Goto DashBoard">
     </form>
-    
+  {% endif %}
     <script>
         window.onload = function() {
             const data = [{

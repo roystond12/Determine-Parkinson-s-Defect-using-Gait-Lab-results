@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='results.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="semi-sec">Login tab</div>  
+    <div class="upload-container">
+    <form action="/upload_video" method="post" enctype="multipart/form-data" class="upload-form">
+        <label for="video" class="upload-label">Upload a video:</label>
+        <input type="file" name="video" accept="video/*" required class="upload-input">
+        <button type="submit" class="upload-button">Upload</button>
+    </form>
+</div>
+    </script>
+</body>
+</html>

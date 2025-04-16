@@ -40,13 +40,15 @@
     </div>
     <div class = "tab3 tab">
         <div class = head>
-            DASHBOARD
+            VIDEO INPUT
         </div>
         <div class = "image-tab">
-            <img class = "image" src="{{url_for('static',filename='dashboard.png')}}" alt="">
+            <img class = "image" src="{{url_for('static',filename='video.png')}}" alt="">
         </div>
         <div class="button">
-            <input type="submit" value = "Proceed"> 
+            <form action="/video" method="get">
+                <input type="submit" value="Proceed">
+            </form>
         </div>
     </div>
     </div>

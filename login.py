@@ -15,6 +15,10 @@ mysql = MySQL(app)
 def index():
     return render_template('login.html')
 
+@app.route('/video', methods=['GET']) 
+def video():
+    return render_template("video.html")
+
 @app.route('/login', methods=['POST']) 
 def login():
     username = request.form['username']
