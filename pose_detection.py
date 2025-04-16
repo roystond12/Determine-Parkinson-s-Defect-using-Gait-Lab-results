@@ -30,30 +30,6 @@ class Pose_detector:
                 cv.circle(img,(cx,cy),10,(225,225,225),4)
                 
         return lmlist
-            
-            
-    
-
-
-
-def main():
-    cap = cv.VideoCapture('C:\\Users\\roy\\Videos\\video.mp4')
-    ctime = ptime = 0
-    detector = Pose_detector()
-    while True:
-        sucess , img = cap.read()
-        img = detector.findpose(img)
-        list = detector.getPosition(img)
-        print(list)
-        ctime = time.time()
-        fps = 1 / (ctime - ptime)
-        ptime = ctime
-        cv.putText(img,str(int(fps)),(10,70),cv.FONT_HERSHEY_COMPLEX_SMALL,3,(225,225,0),3)
-        cv.imshow("Video" , img)
-        if cv.waitKey(1) & 0xFF == ord('q'):
-            break
-    cap.release()
-    cv.destroyAllWindows()
     
 if __name__ == "__main__":
     main()

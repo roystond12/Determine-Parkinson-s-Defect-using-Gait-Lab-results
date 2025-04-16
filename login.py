@@ -2,9 +2,11 @@ from flask import Flask, request, render_template, jsonify
 from flask_mysqldb import MySQL
 import MySQLdb.cursors
 from second import second
+from Pose_details import pose_details
 
 app = Flask(__name__)  
 app.register_blueprint(second)
+app.register_blueprint(pose_details)
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = '' 
