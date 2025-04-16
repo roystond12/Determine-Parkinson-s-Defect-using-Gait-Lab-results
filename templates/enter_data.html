@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='enter_data.css')}}">
+</head>
+<body>
+    <div class="text">
+        ENTER DATA
+    </div>
+    <div class="main">
+    <div class = "inform-text">
+        <img src="{{url_for('static',filename='warn.png')}}" height=15px>
+            Enter the following details properly to get accurate results the better the inputs the better the results
+    </div>
+    <form action="/results" method="POST">
+        <div class="inp1 inp">
+            Enter the Integral pressure : <input type = "number" step="any" name = "step_length" placeholder="(in cms)"> </input>
+        </div>
+        <div class="inp2 inp">
+            Enter the Mean Pressure : <input type = "number" step="any" name = "velocity" placeholder="(cm./sec.)"> </input>
+        </div>
+        <div class="inp3 inp">
+            Enter the Toe In/Out Angle : <input type = "number" step="any" name = "cadence" placeholder="(steps/min.)"> </input>
+        </div>
+        <div class="inp4 inp">
+            Enter the Swing Time : <input type = "number" step="any" name = "Mean eGVI" placeholder=""> </input>
+        </div>
+        <div class="inp5 inp">
+            Enter the SS COP path : <input type = "number" step="any" name = "Left eGVI" placeholder=""> </input>
+        </div>
+        <div class="inp6 inp">
+            Enter the Step Ratio: <input type = "number" step="any" name = "Right eGVI" placeholder=""> </input>
+        </div>
+        <div class="inp7 inp">
+            Enter the Stance time : <input type = "number" step="any" name = "Ambulation Time" placeholder="(sec.)"> </input>
+        </div>
+        <div class="inp8 inp">
+            Enter the SS COP Path Mean: <input type = "number" step="any" name = "Stride Time" placeholder="(sec.)"> </input>
+        </div>
+        <div class="inp9 inp">
+            Enter the Stride Velocity: <input type = "number" step="any" name = "Double Support Time" placeholder="(sec.)"> </input>
+        </div>
+        <div class="inp10 inp">
+            Enter the Toe in/out Angle Mean: <input type = "number" step="any" name = "Swing Time" placeholder="(sec.)"> </input>
+        </div>
+        <div class="inp11 inp">
+            Enter the Mean Stride Velocity: <input type = "number" step="any" name = "Step Time" placeholder="(sec.)"> </input>
+        </div>
+        <div class="inp12 inp">
+            Enter the Toe In/Out Angle Mean: <input type = "number" step="any" name = "Step Width" placeholder="(in cms)"> </input>
+        </div>
+        <div class="inp13 inp">
+            Enter the Stride width : <input type = "number" step="any" name = "Stride Length" placeholder="(in cms)"> </input>
+        </div>
+        <div class="inp14 inp">
+            Enter the Swing : <input type = "number" step="any" name = "Gait Asymmetry" placeholder="(in %)"> </input>
+        </div>
+        <div class="inp15 inp">
+            Enter the Gait Cycle Time: <input type = "number" step="any"name = "Gait Variability" placeholder="(in %)"> </input>
+        </div>
+        <div class="symptoms inp">
+            Symptoms: 
+            <input type="checkbox" name="symptoms" value="symptoms"> Postural
+            <input type="checkbox" name="symptoms" value="symptoms"> Tremor
+            <input type="checkbox" name="symptoms" value="symptoms"> Rigidity
+            <input type="checkbox" name="symptoms" value="symptoms"> instability
+            <input type="checkbox" name="symptoms" value="symptoms"> Bradykinesia
+        </div>
+    </div>
+    <div class="button">
+        <input type = "submit" value = "Check the results" class = "submit">
+    </div>  
+    </form>
+</div>
+
+</body>
+</html>

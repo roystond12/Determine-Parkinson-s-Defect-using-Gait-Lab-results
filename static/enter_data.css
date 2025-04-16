@@ -1,0 +1,95 @@
+body {   
+    background: 
+        linear-gradient(to right, rgba(6, 89, 100, 0.7), rgba(56, 111, 148, 0.7), rgba(111, 158, 189, 0.7)), 
+        url("background.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.text{
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:"wdth" 100; 
+    color: rgb(255, 255, 255);
+}
+.main{
+    display:flex;
+    flex-direction:column;
+    gap:40px;
+}
+form{
+    width : 100%;
+    height : 80%;
+    display:grid;
+    grid-template-columns:repeat(3,3fr);
+}
+.inp{
+    width:15vw;
+    height:12vh;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:"wdth" 100; 
+    color: rgb(255, 255, 255);
+}
+::placeholder{
+    color:white;
+}
+.inp input {
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    outline:none;
+}
+
+.inform-text{
+    font-family: "Open Sans", sans-serif;
+    font-weight:600;
+    color:black;
+    text-border:1px solid black;
+    text-align:center;
+}
+
+.symptoms {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-around;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    color: rgb(255, 255, 255);
+    position: relative;
+    z-index: 1;
+}
+
+.button{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+    border-radius:20px;
+    z-index:10;
+    text-weight:600;
+    width:20%;
+    background-color: rgb(25, 62, 71);
+    box-shadow: 1px 1px 1px rgb(0, 0, 0);
+}
+.submit:hover {
+    color: #032B44;
+}
+.submit {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Open Sans", sans-serif;
+}
+

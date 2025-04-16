@@ -1,0 +1,28 @@
+body {   
+    background: linear-gradient(to right, rgba(6, 89, 100, 0.9), rgba(56, 111, 148, 0.9));
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url("background1.png");
+    background-blend-mode: multiply;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+}
+.container {
+    text-align: center;
+    padding: 20px;
+}
+.results {
+    max-width: 600px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+.pie-chart {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    z-index:4;
+}
