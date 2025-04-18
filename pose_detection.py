@@ -14,12 +14,15 @@ class Pose_detector:
         self.mpDraw = mp.solutions.drawing_utils
         self.pose = self.mypose.Pose()
         
-    def findpose(self,img,draw=True):
-        RGB = cv.cvtColor(img,cv.COLOR_BGR2RGB)
-        self.results = self.pose.process(RGB)
+    def findpose(self, img, draw=True):
+        if img is None:
+            return
+        imgRGB = cv.cvtColor(img, cv.COLOR_BGR2RGB)
+        self.results = self.pose.process(imgRGB)
         if self.results.pose_landmarks and draw:
-                self.mpDraw.draw_landmarks(img,self.results.pose_landmarks,self.mypose.POSE_CONNECTIONS)
+            self.mpDraw.draw_landmarks(img, self.results.pose_landmarks, self.mypose.POSE_CONNECTIONS)
         return img
+    
     def getPosition(self,img,draw=True):
         lmlist = []
         if self.results.pose_landmarks and draw:

@@ -66,10 +66,5 @@ def results():
 
 @second.route('/dashboard', methods=['POST'])
 def dashboard():
-    data = request.form.to_dict(flat=False)  
-    print("-------------------------------------------")
-    print(data)
-    percprediction = float(data['percprediction'][0] or 0)
-    print(percprediction)
-    return render_template('dashboard.html', percprediction=percprediction)
+    return render_template('index.html')
 

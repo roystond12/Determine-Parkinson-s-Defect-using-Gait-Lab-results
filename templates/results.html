@@ -8,6 +8,9 @@
     <script src="https://cdn.plot.ly/plotly-2.11.1.min.js"></script>
 </head>
 <body>
+    <form class = "back" action="/back" method="post">
+        <input type="submit" value="Home">
+    </form>
     <div class="container">
         <h2>PREDICTION RESULTS</h2>
         {% if percprediction is defined %}
@@ -29,9 +32,9 @@
         {% endif %}
     </div>
     {% if percprediction is defined %}
-    <form action="/dashboard" method="post">
+    <form class = "dash" action="/dashboard" method="post">
         <input type="hidden" name="percprediction" value="{{ percprediction }}">
-        <input type="submit" value="Goto DashBoard">
+        <input type="submit" value="Go Back">
     </form>
   {% endif %}
     <script>

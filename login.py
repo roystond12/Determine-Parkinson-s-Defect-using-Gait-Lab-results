@@ -3,10 +3,14 @@ from flask_mysqldb import MySQL
 import MySQLdb.cursors
 from second import second
 from Pose_details import pose_details
+from stream import stream
 
 app = Flask(__name__)  
 app.register_blueprint(second)
 app.register_blueprint(pose_details)
+app.register_blueprint(stream)
+
+
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = '' 

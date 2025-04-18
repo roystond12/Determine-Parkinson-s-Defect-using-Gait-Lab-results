@@ -29,13 +29,15 @@
     </div>
     <div class = "tab2 tab">
         <div class = head>
-            RESULTS
+            LiveStream
         </div>
         <div class = "image-tab">
-            <img class = "image" src="{{url_for('static',filename='result.png')}}" alt="">
+            <img class = "image" src="{{url_for('static',filename='livestream.png')}}" alt="">
         </div>
         <div class="button">
+            <form action="/livestream" method="get">
             <input type="submit" value = "Proceed">
+            </form>
         </div>
     </div>
     <div class = "tab3 tab">

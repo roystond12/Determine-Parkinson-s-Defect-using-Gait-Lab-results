@@ -92,6 +92,19 @@ form{
 }
 
 .dash{
-    background-color: transparent
+    background-color: transparent;
+    z-index:1;
+    height:10vh;
+    width:10vw;
+    position: absolute;
+    top: 0px;
 }
 
+.back{
+    background-color: transparent;
+    z-index:1;
+    height:10vh;
+    width:10vw;
+    position: absolute;
+    top: 0px;
+}
