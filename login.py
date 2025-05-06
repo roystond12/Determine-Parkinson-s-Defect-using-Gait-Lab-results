@@ -29,7 +29,7 @@ def video():
 def login():
     username = request.form['username']
     password = request.form['password']
-    cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
+    cursor = mysql.connect.cursor(MySQLdb.cursors.DictCursor)
     cursor.execute('SELECT * FROM users WHERE username = %s AND password = %s', (username, password,))
     account = cursor.fetchone()
     if account:
@@ -44,3 +44,4 @@ def enter_data():
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
+
