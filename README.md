@@ -48,7 +48,7 @@ Using **pose estimation, skeletal tracking, and ML-based prediction**, our tool 
 
 <p align="center">
   <img src="arch.png" width="600" alt="Gait Skeleton Tracking"/>
-  <img src=results.png" width="600" alt="Prediction Result"/>
+  <img src=result.png" width="600" alt="Prediction Result"/>
 </p>
 
 ---
