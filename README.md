@@ -1,7 +1,6 @@
 # 🧠 Determine Parkinson's Defect Using Gait Lab Results
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue.svg)
-![License](https://img.shields.io/github/license/roystond12/Determine-Parkinson-s-Defect-using-Gait-Lab-results)
 ![Issues](https://img.shields.io/github/issues/roystond12/Determine-Parkinson-s-Defect-using-Gait-Lab-results)
 ![Last Commit](https://img.shields.io/github/last-commit/roystond12/Determine-Parkinson-s-Defect-using-Gait-Lab-results)
 
