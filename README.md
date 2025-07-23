@@ -43,12 +43,9 @@ Using **pose estimation, skeletal tracking, and ML-based prediction**, our tool 
 ---
 
 ## 📷 Screenshots
-
-> Replace with your own screenshots from the project
-
 <p align="center">
   <img src="arch.png" width="600" alt="Gait Skeleton Tracking"/>
-  <img src=result.png" width="600" alt="Prediction Result"/>
+  <img src="result.png" width="600" alt="Prediction Result"/>
 </p>
 
 ---
