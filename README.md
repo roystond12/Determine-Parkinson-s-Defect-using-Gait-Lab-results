@@ -5,8 +5,8 @@
 ![Last Commit](https://img.shields.io/github/last-commit/roystond12/Determine-Parkinson-s-Defect-using-Gait-Lab-results)
 
 > 🩺 AI-powered Gait Diagnostics System for Early Parkinson's Detection  
-> 📈 Real-Time Gait Visualization | 🧠 ML Classifier | 🦿 Limb Asymmetry Detection  
-> 🔬 Built using OpenPose, Flask, TensorFlow, and Mediapipe
+> 📈 Real-Time Gait Visualization | 🧠 ML Classifier  
+> 🔬 Built using Flask and Mediapipe
 
 ---
 
@@ -68,12 +68,13 @@ We utilized public and research-grade gait datasets such as:
 git clone https://github.com/roystond12/Determine-Parkinson-s-Defect-using-Gait-Lab-results.git
 cd Determine-Parkinson-s-Defect-using-Gait-Lab-results ``
 
-2️⃣ Install Dependencies
+## 2️⃣ Install Dependencies
 bash
 Copy
 Edit
 pip install -r requirements.txt
-3️⃣ Launch the Flask App
+
+## 3️⃣ Launch the Flask App
 bash
 Copy
 Edit
@@ -82,12 +83,12 @@ Then visit: http://localhost:5000
 
 Upload a video, get predictions, and analyze gait patterns.
 
-🧪 Model Performance
+## 🧪 Model Performance
 Model	Accuracy	Precision	Recall
 XGBoost	93.2%	92.4%	91.7%
 RandomForest	90.8%	89.6%	90.0%
 
-📊 Core Gait Features Extracted
+## 📊 Core Gait Features Extracted
 🦶 Step Length Mean
 
 🦿 Velocity (normalized)
@@ -102,15 +103,15 @@ RandomForest	90.8%	89.6%	90.0%
 
 📈 Parkinson Probability
 
-🔐 Security & Ethics
+## 🔐 Security & Ethics
 All analysis is local-first and privacy-conscious.
 
 No user data is stored unless explicitly integrated.
 
 Designed to support ethical AI in clinical diagnostics.
 
-🎯 Future Scope
-Real-time camera integration (no video upload)
+
+## 🎯 Future Scope
 
 Broader gait classification: stroke, cerebral palsy
 
@@ -118,7 +119,7 @@ Doctor feedback loop and rehabilitation tracking
 
 Deployable on hospital systems or mobile apps
 
-🧾 References
+## 🧾 References
 OpenPose - IEEE PAMI 2019
 
 Wistar GAIT Dataset
@@ -129,17 +130,7 @@ ML for Gait Disorders – Intl. Conf. on Health Informatics
 
 AI for Clinical Gait Analysis – Biomedical Journal
 
-📜 License
-This project is licensed under the MIT License.
 
-🙌 Acknowledgments
-Grateful to:
 
-Prof. Kirti Motwani (Project Guide)
-
-Xavier Institute of Engineering
-
-Our project team: Royston Dsouza, Basil Ferreira, Glen Mathias, Chris Burkhao
-
-📫 Contact
+## 📫 Contact
 Built with ❤️ by Royston Dsouza
