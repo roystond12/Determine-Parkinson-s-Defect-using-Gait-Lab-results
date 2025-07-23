@@ -11,11 +11,11 @@ A machine learning-powered diagnostic support tool that analyzes gait lab test r
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="images/arch.png" alt="Gait Analysis Graph" width="600"/>
+  <img src="arch.png" alt="Gait Analysis Graph" width="600"/>
 </p>
 
 <p align="center">
-  <img src="images/result.png" alt="Model Performance" width="600"/>
+  <img src="result.png" alt="Model Performance" width="600"/>
 </p>
 
 ---
